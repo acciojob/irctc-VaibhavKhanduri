@@ -23,13 +23,14 @@ public class Passenger {
 
     private int age;
 
-    //passengers and tickets are many to many
-    @ManyToMany
-    @JoinColumn
-    private List<Ticket> bookedTickets;
+    //passengers and tickets are many to manny
 
     public Passenger() {
     }
+
+    @ManyToMany
+    @JoinColumn
+    private List<Ticket> bookedTickets;
 
     public Passenger(int passengerId, String name, int age, List<Ticket> bookedTickets) {
         this.passengerId = passengerId;
